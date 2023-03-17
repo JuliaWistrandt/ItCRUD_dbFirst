@@ -1,0 +1,43 @@
+﻿@model Client
+
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col"> </th>
+                    <th scope="col"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">ID</th>
+                    <td>@Model.Id</td>
+                </tr>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td colspan="2">@Model.Email</td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone</th>
+                    <td>@Model.Phone</td>
+                </tr>
+                <tr>
+                    <th scope="row">Company</th>
+                    <td>@Model.Company</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="card-text">WARNING: Any items emptied from the trash are no longer available.</p>
+        <a type="button" class="btn btn-danger" asp-controller="Client" asp-action="DeleteClient" asp-route-Id="@Model.Id">Remove</a>
+    </div>
+</div>
+
+
+

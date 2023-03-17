@@ -1,0 +1,31 @@
+﻿@using ItAgency_bdCRUD.Controllers;
+@model IEnumerable<ItAgency_bdCRUD.Models.Client>;
+
+@{
+    ViewData["Title"] = "Clients Database";
+}
+
+<table class="table table-bordered table-hover table-sm">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Company</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
